@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELCCO - Cargando...</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000, #0d1b2a, #1e3c72, #ffffff);
+            background-size: 200% 200%;
+            animation: gradientBG 12s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .loader-container {
+            text-align: center;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95);}
+            to {opacity: 1; transform: scale(1);}
+        }
+
+        .logo {
+            width: 160px;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0px 8px 18px rgba(0,0,0,0.6)) 
+                    drop-shadow(0px 0px 12px rgba(30, 144, 255, 0.4));
+        }
+
+        @keyframes float {
+            0% {transform: translateY(0px);}
+            50% {transform: translateY(-15px);}
+            100% {transform: translateY(0px);}
+        }
+
+        /* Spinner elegante */
+        .spinner {
+            margin-top: 30px;
+            width: 55px;
+            height: 55px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #1e90ff;
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container">
+        <img src="img/WhatsApp Image 2025-09-13 at 10.41.58 AM.jpeg" alt="Logo BN Tech" class="logo">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 6000);
+    </script>
+
+</body>
+</html>
+

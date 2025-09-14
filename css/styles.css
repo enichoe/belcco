@@ -1,0 +1,460 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: linear-gradient(90deg, #0d47a1, #000000);
+}
+
+.navbar-brand img {
+  border-radius: 8px;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #90caf9 !important;
+}
+
+/* =========================
+   BANNER
+========================= */
+header {
+  background: url(/img/baner1.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+
+header h1 {
+  animation: fadeInDown 1.5s ease;
+  color: #2c2588 !important;
+}
+
+header p {
+  animation: fadeInUp 2s ease;
+  color: #000000;
+  font-weight: bold !important;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 80px 0;
+}
+
+#servicios .card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#servicios .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   CLIENTES
+========================= */
+#clientes img {
+  max-width: 120px;
+  margin: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+#clientes img:hover {
+  filter: grayscale(0);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+#contacto a {
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+#contacto a:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: linear-gradient(90deg, #000000, #0d47a1);
+  color: #fff;
+  font-size: 14px;
+}
+
+/* ======================
+       Color variables (modifica aquí)
+       ====================== */
+    :root{
+      --brand-900: #0b3d91;    /* principal oscuro */
+      --brand-700: #1661c1;    /* principal */
+      --accent: #ff7a59;       /* acento */
+      --muted: #6c757d;        /* texto secundario */
+      --bg: #f8fbff;           /* fondo pagina */
+      --card: #ffffff;         /* fondo tarjetas */
+      --color-principal: #6a0dad; /* Morado */
+      --color-secundario: #ffcc00; /* Amarillo */
+      --color-fondo: #f8f9fa;
+    }
+
+    /* Basic page styles */
+    body{background: var(--color-fondo); color:#0d1b2a; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    .navbar-brand strong{color:var(--brand-700)}
+
+    /* Banner */
+    .hero{background: linear-gradient(120deg, rgba(11,61,145,0.95), rgba(189, 202, 218, 0.9)); color: white; padding: 80px 0;}
+    .hero .lead{opacity:0.95}
+
+    /* Services cards */
+    .service-card{background:var(--card); border-radius:12px; box-shadow:0 8px 20px rgba(13,27,42,0.06); transition:transform .18s ease, box-shadow .18s ease}
+    .service-card:hover{transform:translateY(-6px); box-shadow:0 18px 30px rgba(13,27,42,0.08)}
+
+    /* Offer tag */
+    .offer-badge{background:linear-gradient(90deg,var(--accent), #ff925f); color:#fff; padding:6px 12px; border-radius:999px; font-weight:600}
+
+    /* FAQ */
+    .faq-item{border-left:4px solid transparent; padding-left:12px}
+    .faq-item.show{border-left-color:var(--brand-700)}
+
+    /* Testimonials */
+    .testimonial{background: #f9f9f9; border-radius:14px; padding:18px}
+    .testimonial-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 3px solid #ddd;
+    }
+
+    /* Chatbot floating */
+    .chat-bubble{position:fixed; right:20px; bottom:20px; z-index:1100}
+    .chat-btn{
+        width:64px; 
+        height:64px; 
+        border-radius:50%; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center; 
+        box-shadow:0 8px 22px rgba(2,6,23,0.18); 
+        background:var(--brand-700); 
+        color:white; 
+        border:none;
+        animation: float 3s ease-in-out infinite;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .chat-btn:hover {
+        background-color: #0b5ed7;
+        box-shadow: 0 6px 15px rgba(11, 94, 215, 0.8);
+    }
+    .chat-window{position:fixed; right:20px; bottom:100px; width:360px; max-width:92vw; z-index:1101; display:none}
+    .chat-window .messages{height:320px; overflow:auto}
+
+    /* Footer */
+    footer{background:#0d1b2a; color:#e9eef8}
+    footer a{color:#cfe3ff}
+
+    /* Responsive tweaks */
+    @media (max-width:576px){
+      .hero{padding:48px 0}
+      .chat-window{right:12px; bottom:88px}
+    }
+    
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.chat-btn:hover {
+  background-color: #0b5ed7;
+  box-shadow: 0 6px 15px rgba(11, 94, 215, 0.8);
+}
+
+
+.social-icons .social-link {
+  font-size: 2rem;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Barra underline oculta inicialmente */
+.social-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hover: mostrar underline + escalar icono */
+.social-link:hover {
+  color: currentColor; /* mantiene el color original */
+  transform: scale(1.2);
+}
+
+.social-link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+
+
+/* SVG TikTok tamaño igual que iconos */
+.social-link.tiktok svg {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'Bootstrap Icons';
+  font-display: swap !important;
+}
+
+.logo-redondo {
+  border-radius: 20%; /* Esto hace que el elemento sea un círculo perfecto */
+  width: 60px; /* Ajusta el ancho según el tamaño deseado */
+  height: 60px; /* Ajusta la altura según el tamaño deseado, debe ser igual al ancho para un círculo */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+
+/* ===== ANIMACIONES GENERALES ===== */
+
+/* Fade hacia arriba */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Escalado de entrada */
+@keyframes scaleIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Slide lateral con blur */
+@keyframes slideLeft {
+  0% { opacity: 0; transform: translateX(-50px); filter: blur(5px); }
+  100% { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(50px); filter: blur(5px); }
+  100% { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+/* Zoom + rotación */
+@keyframes zoomRotateIn {
+  0% { opacity: 0; transform: scale(0.85) rotate(3deg); filter: blur(4px); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
+}
+
+/* Reveal con clip-path */
+@keyframes revealLeft {
+  0% { opacity: 0; transform: translateX(-50px); clip-path: inset(0 100% 0 0); }
+  100% { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); }
+}
+
+@keyframes revealRight {
+  0% { opacity: 0; transform: translateX(50px); clip-path: inset(0 0 0 100%); }
+  100% { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); }
+}
+
+/* Fade desde abajo */
+@keyframes fadeUpInfo {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Zoom-out con blur */
+@keyframes zoomOutInfo {
+  0% { opacity: 0; transform: scale(1.1); filter: blur(4px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+/* Tilt con entrada */
+@keyframes tiltIn {
+  0% { opacity: 0; transform: rotateY(10deg) translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: rotateY(0deg) translateY(0) scale(1); }
+}
+
+/* ===== ESTADOS INICIALES UNIFICADOS ===== */
+.hero .col-lg-7,
+.hero .col-lg-5,
+#quienes .col-lg-6,
+#servicios .service-card,
+#oferta .col-lg-8,
+#oferta .col-lg-4,
+#info .col-lg-8,
+#info .col-lg-4,
+#proyectos .service-card {
+  opacity: 0;
+}
+
+/* ===== ANIMACIONES POR SECCIÓN ===== */
+
+/* Hero */
+.hero.show .col-lg-7 { animation: fadeUp 0.8s ease forwards; }
+.hero.show .col-lg-5 { animation: scaleIn 0.8s ease forwards 0.4s; }
+.hero.show h1 { animation: fadeUp 0.8s ease forwards; }
+.hero.show p { animation: fadeUp 0.8s ease forwards 0.2s; }
+.hero.show .btn { animation: fadeUp 0.8s ease forwards 0.4s; }
+
+/* Quienes */
+#quienes.show .col-lg-6:first-child { animation: slideLeft 0.9s ease forwards; }
+#quienes.show .col-lg-6:last-child { animation: slideRight 0.9s ease forwards 0.2s; }
+
+/* Servicios */
+#servicios .service-card { transform: scale(0.85) rotate(3deg); }
+#servicios.show .service-card { animation: zoomRotateIn 0.6s ease forwards; }
+#servicios.show .service-card:nth-child(1) { animation-delay: 0s; }
+#servicios.show .service-card:nth-child(2) { animation-delay: 0.1s; }
+#servicios.show .service-card:nth-child(3) { animation-delay: 0.2s; }
+#servicios.show .service-card:nth-child(4) { animation-delay: 0.3s; }
+#servicios.show .service-card:nth-child(5) { animation-delay: 0.4s; }
+#servicios.show .service-card:nth-child(6) { animation-delay: 0.5s; }
+
+/* Oferta */
+#oferta.show .col-lg-8 { animation: revealLeft 0.8s ease-out forwards; }
+#oferta.show .col-lg-4 { animation: revealRight 0.8s ease-out forwards 0.2s; }
+
+/* Info */
+#info.show .col-lg-8 { animation: fadeUpInfo 0.8s ease forwards; }
+#info.show .col-lg-4 { animation: zoomOutInfo 0.8s ease forwards 0.3s; }
+
+/* Proyectos */
+#proyectos .service-card {
+  transform: rotateY(10deg) translateY(30px) scale(0.95);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+#proyectos.show .service-card { animation: tiltIn 0.7s ease forwards; }
+#proyectos .service-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.modal-content {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.5s ease-out;
+}
+
+.modal-header {
+  background: linear-gradient(-45deg, var(--brand-900), var(--brand-700), var(--accent), #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  text-align: center;
+  font-style: bold;
+  font-size: 1.1rem;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 0 2rem 2rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff6347; /* Un poco más oscuro */
+  border-color: #ff6347;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 122, 89, 0.4);
+}
+
+.cliente-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cliente-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.cliente-item h6 {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
