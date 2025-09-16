@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BELCCO CONSULTORES SAC - Inicio</title>
+  <title>BELCCO Consultores - Inicio</title>
   <link rel="icon" href="img/WhatsApp Image 2025-09-13 at 10.41.58 AM.jpeg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -15,12 +15,16 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
       <a class="navbar-brand fw-bold" href="home.html">
-        <img src="img/WhatsApp Image 2025-09-13 at 10.41.58 AM.jpeg" width="60" class="me-2"> BELCCO CONSULTORES
+        <img src="img/logo2.jpeg" width="60" class="me-2"> 
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
+        <form class="d-flex mx-auto search-form">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        </form>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
@@ -34,55 +38,30 @@
   <!-- Banner -->
   <header class="bg-dark text-white text-center d-flex align-items-center" style="height:100vh;">
     <div class="container">
-      <h1 class="display-3 fw-bold">Bienvenido a BELCCO CONSULTORES SAC</h1>
+      <h1 class="display-3 fw-bold">Bienvenido a BELCCO</h1>
       <p class="lead">Contable • Tributario • Legal • Sistemas</p>
       <a href="#servicios" class="btn btn-primary btn-lg mt-3">Ver Servicios</a>
     </div>
   </header>
 
-  <!-- Nosotros -->
-<section id="nosotros" class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Columna de texto -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="fw-bold mb-4 text-primary">Nosotros</h2>
-        <p class="lead">
-          Somos una empresa dedicada a brindar soluciones integrales en las áreas <strong>contables, tributarias, legales y de sistemas</strong>.
-        </p>
-        <p class="lead">
-          <strong>BELCCO</strong> es una empresa especializada en asesoría y consultoría contable, tributaria, legal y tecnológica. Ayudamos a las empresas a hacer sus operaciones más rentables mediante un enfoque integral y especializado.
-        </p>
-        <p class="lead">
-          En <strong>BELCCO</strong>, nuestra filosofía se basa en el compromiso, la flexibilidad para adaptarnos a cada empresa y la inversión en relaciones a largo plazo con nuestros clientes.
-        </p>
-        <p class="lead">
-          Contamos con un equipo de profesionales expertos en cada especialidad, capaces de ofrecer una atención personalizada frente a los cambios del entorno empresarial.
-        </p>
-        <p class="lead mb-0">
-          Nuestros costos son altamente competitivos gracias a la practicidad de nuestros procedimientos, respaldados por nuestra experiencia y conocimiento.
-        </p>
-      </div>
-
-      <!-- Columna de imagen -->
-      <div class="col-lg-6 text-center">
-        <img src="img/about_02.jpg" alt="Equipo de trabajo" class="img-fluid rounded shadow">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Servicios -->
+  <!-- Servicios -->
 <section id="servicios" class="py-5 bg-light">
   <div class="container text-center">
     <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
     <div class="row g-4">
       
+      <!-- Servicio Sistemas -->
+      <div class="col-md-3">
+        <a href="sistemas.html" class="text-decoration-none text-dark">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <img src="img/TI.jpg" alt="Sistemas" class="mb-3" width="250">
+              <h5 class="card-title">Sistemas</h5>
+              <p class="card-text">Desarrollo de software y TI.</p>
+            </div>
+          </div>
+        </a>
+      </div>
       <!-- Servicio Contable -->
       <div class="col-md-3">
         <a href="contable.html" class="text-decoration-none text-dark">
@@ -122,23 +101,11 @@
         </a>
       </div>
 
-      <!-- Servicio Sistemas -->
-      <div class="col-md-3">
-        <a href="sistemas.html" class="text-decoration-none text-dark">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <img src="img/TI.jpg" alt="Sistemas" class="mb-3" width="250">
-              <h5 class="card-title">Sistemas</h5>
-              <p class="card-text">Desarrollo de software y TI.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+      
 
     </div>
   </div>
 </section>
-
 
   <!-- Clientes -->
 <section id="clientes" class="py-5 bg-light">
@@ -152,32 +119,32 @@
       <!-- Cliente 1 -->
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
-          <img src="images/clientes/nutriza.jpg" alt="Nutriza" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">Nutriza</h6>
+          <img src="images/clientes/cedive.jpeg" alt="Nutriza" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">CEDDIVE SAC</h6>
         </div>
       </div>
 
       <!-- Cliente 2 -->
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
-          <img src="images/clientes/iep_drj.jpg" alt="IEP Divino Rey Jesús" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">IEP Divino Rey Jesús</h6>
+          <img src="images/clientes/beeser.jpeg" alt="IEP Divino Rey Jesús" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">BEESER PUBLICIDAD SAC</h6>
         </div>
       </div>
 
       <!-- Cliente 3 -->
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
-          <img src="images/clientes/romswwil.png" alt="Romswil" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">Romswil</h6>
+          <img src="images/clientes/comiluz.jpeg" alt="Romswil" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">COMILUZ SAC</h6>
         </div>
       </div>
 
       <!-- Cliente 4 -->
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
-          <img src="images/clientes/wilmar.png" alt="Grupo Wilmar Import" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">Grupo Wilmar</h6>
+          <img src="images/clientes/essen.jpeg" alt="Grupo Wilmar Import" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">MYENDY PERU SAC</h6>
         </div>
       </div>
 
@@ -185,21 +152,76 @@
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
           <img src="images/clientes/sami.jpg" alt="SAMI Diseño" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">SAMI Diseño</h6>
+          <h6 class="mt-2">SAMI DISEÑO</h6>
         </div>
       </div>
 
       <!-- Cliente 5 -->
       <div class="col-6 col-md-4 col-lg-2">
         <div class="cliente-item">
-          <img src="images/clientes/coca.png" alt="SAMI Diseño" class="img-fluid rounded shadow-sm">
-          <h6 class="mt-2">COCA COLA</h6>
+          <img src="images/clientes/javier.jpeg" alt="SAMI Diseño" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">RESTAURANTE JAVIER SAC</h6>
         </div>
+      </div>
+      <!-- Cliente 7 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="cliente-item">
+          <img src="images/clientes/norte.jpeg" alt="SAMI Diseño" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">COMERCIAL GRUPO NORTE SAC</h6>
+        </div>
+      </div>
+      <!-- Cliente 8 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="cliente-item">
+          <img src="images/clientes/osiris.jpeg" alt="SAMI Diseño" class="img-fluid rounded shadow-sm">
+          <h6 class="mt-2">OSIRIS SEGURIDAD INTEGRAL</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Nosotros -->
+<section id="nosotros" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Columna de texto -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-4 ">Nosotros</h2>
+        <p class="lead">
+          Somos una empresa dedicada a brindar soluciones integrales en las áreas <strong>contables, tributarias, legales y de sistemas</strong>.
+        </p>
+        <p class="lead">
+          <strong>BELCCO</strong> es una empresa especializada en asesoría y consultoría contable, tributaria, legal y tecnológica. Ayudamos a las empresas a hacer sus operaciones más rentables mediante un enfoque integral y especializado.
+        </p>
+        <p class="lead">
+          En <strong>BELCCO</strong>, nuestra filosofía se basa en el compromiso, la flexibilidad para adaptarnos a cada empresa y la inversión en relaciones a largo plazo con nuestros clientes.
+        </p>
+        <p class="lead">
+          Contamos con un equipo de profesionales expertos en cada especialidad, capaces de ofrecer una atención personalizada frente a los cambios del entorno empresarial.
+        </p>
+        <p class="lead mb-0">
+          Nuestros costos son altamente competitivos gracias a la practicidad de nuestros procedimientos, respaldados por nuestra experiencia y conocimiento.
+        </p>
+      </div>
+
+      <!-- Columna de imagen -->
+      <div class="col-lg-6 text-center">
+        <img src="img/about_02.jpg" alt="Equipo de trabajo" class="img-fluid rounded shadow">
       </div>
 
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
 
   <!-- Objetivo y Visión -->
 <section id="objetivo-vision" class="py-5 bg-white">
@@ -209,7 +231,7 @@
       <!-- Texto -->
       <div class="col-lg-6 mb-4 mb-lg-0">
         <div class="message-box text-justify">
-          <h2 class="fw-bold text-primary mb-3">
+          <h2 class="fw-bold mb-3">
             <i class="bi bi-bullseye"></i> Nuestro Objetivo
           </h2>
           <p class="lead">
@@ -217,7 +239,7 @@
             Nos convertimos en el aliado estratégico que les permite enfocarse en lo que realmente les apasiona.
           </p>
 
-          <h2 class="fw-bold text-primary mt-5 mb-3">
+          <h2 class="fw-bold mt-5 mb-3">
             <i class="bi bi-eye"></i> Nuestra Visión
           </h2>
           <p class="lead">
@@ -239,15 +261,15 @@
   <!-- Contacto -->
 <section id="contacto" class="py-5 bg-dark text-light">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4">Contáctanos</h2>
+    <h2 class="fw-bold mb-4 text-white" >Contáctanos</h2>
     <p class="mb-2">📧 
-      <a href="mailto:contacto@bntech.com" class="text-light text-decoration-none">
-        informes@belccoconsultores.com
+      <a href="mailto:informes@belcco.pe" class="text-light text-decoration-none">
+        informes@belcco.pe
       </a>
     </p>
     <p class="mb-4">📞 
-      <a href="tel:+51999999999" class="text-light text-decoration-none">
-        +51 999 999 999
+      <a href="tel:+51942394745" class="text-light text-decoration-none">
+        +51 942394745
       </a>
     </p>
 
@@ -276,5 +298,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
