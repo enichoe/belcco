@@ -160,13 +160,6 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1 // Trigger when 10% of the element is visible
 });
 
-// Observe all sections with an ID
-document.querySelectorAll('section[id]').forEach((section) => {
-  observer.observe(section);
-});
-
-// Also observe the hero header
-const hero = document.querySelector('.hero');
-if (hero) {
-  observer.observe(hero);
-}
+// Observe all hidden sections
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

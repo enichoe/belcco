@@ -68,15 +68,6 @@ header p {
   font-weight: bold !important;
 }
 
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 /* =========================
    SECCIONES
@@ -283,122 +274,92 @@ footer {
   object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
 }
 
-
-/* ===== ANIMACIONES GENERALES ===== */
-
-/* Fade hacia arriba */
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Escalado de entrada */
-@keyframes scaleIn {
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Slide lateral con blur */
-@keyframes slideLeft {
-  0% { opacity: 0; transform: translateX(-50px); filter: blur(5px); }
-  100% { opacity: 1; transform: translateX(0); filter: blur(0); }
-}
-
-@keyframes slideRight {
-  0% { opacity: 0; transform: translateX(50px); filter: blur(5px); }
-  100% { opacity: 1; transform: translateX(0); filter: blur(0); }
-}
-
-/* Zoom + rotación */
-@keyframes zoomRotateIn {
-  0% { opacity: 0; transform: scale(0.85) rotate(3deg); filter: blur(4px); }
-  100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
-}
-
-/* Reveal con clip-path */
-@keyframes revealLeft {
-  0% { opacity: 0; transform: translateX(-50px); clip-path: inset(0 100% 0 0); }
-  100% { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); }
-}
-
-@keyframes revealRight {
-  0% { opacity: 0; transform: translateX(50px); clip-path: inset(0 0 0 100%); }
-  100% { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); }
-}
-
-/* Fade desde abajo */
-@keyframes fadeUpInfo {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Zoom-out con blur */
-@keyframes zoomOutInfo {
-  0% { opacity: 0; transform: scale(1.1); filter: blur(4px); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0); }
-}
-
-/* Tilt con entrada */
-@keyframes tiltIn {
-  0% { opacity: 0; transform: rotateY(10deg) translateY(30px) scale(0.95); }
-  100% { opacity: 1; transform: rotateY(0deg) translateY(0) scale(1); }
-}
-
-/* ===== ESTADOS INICIALES UNIFICADOS ===== */
-.hero .col-lg-7,
-.hero .col-lg-5,
-#quienes .col-lg-6,
-#servicios .service-card,
-#oferta .col-lg-8,
-#oferta .col-lg-4,
-#info .col-lg-8,
-#info .col-lg-4,
-#proyectos .service-card {
+/* =========================
+   ANIMATIONS
+========================= */
+.hidden {
   opacity: 0;
+  transition: all 1s;
 }
 
-/* ===== ANIMACIONES POR SECCIÓN ===== */
-
-/* Hero */
-.hero.show .col-lg-7 { animation: fadeUp 0.8s ease forwards; }
-.hero.show .col-lg-5 { animation: scaleIn 0.8s ease forwards 0.4s; }
-.hero.show h1 { animation: fadeUp 0.8s ease forwards; }
-.hero.show p { animation: fadeUp 0.8s ease forwards 0.2s; }
-.hero.show .btn { animation: fadeUp 0.8s ease forwards 0.4s; }
-
-/* Quienes */
-#quienes.show .col-lg-6:first-child { animation: slideLeft 0.9s ease forwards; }
-#quienes.show .col-lg-6:last-child { animation: slideRight 0.9s ease forwards 0.2s; }
-
-/* Servicios */
-#servicios .service-card { transform: scale(0.85) rotate(3deg); }
-#servicios.show .service-card { animation: zoomRotateIn 0.6s ease forwards; }
-#servicios.show .service-card:nth-child(1) { animation-delay: 0s; }
-#servicios.show .service-card:nth-child(2) { animation-delay: 0.1s; }
-#servicios.show .service-card:nth-child(3) { animation-delay: 0.2s; }
-#servicios.show .service-card:nth-child(4) { animation-delay: 0.3s; }
-#servicios.show .service-card:nth-child(5) { animation-delay: 0.4s; }
-#servicios.show .service-card:nth-child(6) { animation-delay: 0.5s; }
-
-/* Oferta */
-#oferta.show .col-lg-8 { animation: revealLeft 0.8s ease-out forwards; }
-#oferta.show .col-lg-4 { animation: revealRight 0.8s ease-out forwards 0.2s; }
-
-/* Info */
-#info.show .col-lg-8 { animation: fadeUpInfo 0.8s ease forwards; }
-#info.show .col-lg-4 { animation: zoomOutInfo 0.8s ease forwards 0.3s; }
-
-/* Proyectos */
-#proyectos .service-card {
-  transform: rotateY(10deg) translateY(30px) scale(0.95);
-  transform-origin: center;
-  transition: transform 0.3s ease;
+.show {
+  opacity: 1;
 }
-#proyectos.show .service-card { animation: tiltIn 0.7s ease forwards; }
-#proyectos .service-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+#servicios.show {
+  animation: slideInFromLeft 1s ease-out forwards;
 }
+
+#clientes.show {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+#nosotros.show {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+#objetivo-vision.show {
+  animation: zoomIn 1s ease-out forwards;
+}
+
+#contacto.show {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 
 
 
@@ -512,4 +473,36 @@ footer {
 
 .search-results a:hover {
   background-color: #f0f0f0;
+}
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-float {
+  /* Posicionamiento y alineación */
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  
+  /* Apariencia visual */
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+
+  /* Centrar el icono */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Transición para efectos suaves */
+  transition: transform .3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor */
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
